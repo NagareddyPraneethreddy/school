@@ -1,0 +1,37 @@
+.p1{
+    background-color:grey;
+    height: 100vh;
+    width: 80vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.c1{
+    background-color: aliceblue;
+    box-shadow: 0px 0px 20px black;
+    height:auto;
+    width: 50%;
+    text-decoration: underline;
+}
+h2{
+    text-align: center;
+    text-decoration: solid;
+    color: brown;
+}
+form{
+    padding-left: 60px;
+}
+label{
+    margin: 15px;
+    width: 100px;
+    font-weight: 700;
+}
+button{
+    background-color: yellow;
+    border: none;
+    font-weight: 800;
+    padding: 10px;
+    position: relative;
+    left: 150px;
+    box-shadow: 0px 0px 10px black;
+}
