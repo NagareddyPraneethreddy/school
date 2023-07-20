@@ -2,10 +2,12 @@
     <div class="p1">
         <h1>School</h1>
         <hr>
-        <h3>Home</h3>
-        <h3>Create Students</h3>
-        <h3>All Students</h3><br>
+        <h3 routerLink="home">Home</h3>
+        <h3 routerLink="create">Create Students</h3>
+        <h3 routerLink="student">All Students</h3><br>
         <button routerLink="/login" class="btn btn-danger">Logout</button>
     </div>
-    <div class="p2"></div>
+    <div class="p2">
+        <router-outlet></router-outlet>
+    </div>
 </div>
