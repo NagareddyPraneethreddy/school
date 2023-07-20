@@ -8,39 +8,34 @@
 }
 .p1{
     height: 100%;
-    width: 30%;
+    width: 20%;
     background-color: cadetblue;
 }
 .p2{
     height: 100%;
-    width: 70%;
+    width: 80%;
     background-color: cornflowerblue ;
 }
-h2{
-    padding-left: 30px;
-    margin-bottom: 30px;
-   
-    font-weight: 600;
-}
 h1{
-    padding-left: 80px;
-    font-weight: 900;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding-left: 50px;
     color: brown;
+    font-weight: bold;
     text-decoration: underline;
+}
+h3{
+    margin: 20px;
+}
+h3:hover{
+    background-color:whitesmoke;
 }
 button{
     padding: 15px;
-    position: relative;
-    left: 90px;
+    margin-left: 60px;
+    border: none;
+    font-size: large;
+    font-weight: 600;
 }
 button:hover{
-    background-color: goldenrod;
-    cursor: pointer;
+    background-color: white;
+    color: red;
 }
-h2:hover{
-    background-color: darkgray;
-    width: 80%;
-    
-}
-
