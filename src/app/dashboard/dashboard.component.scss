@@ -1,0 +1,46 @@
+.child{
+    height: 100vh;
+    width: 100vw;
+    background-color: bisque;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.p1{
+    height: 100%;
+    width: 30%;
+    background-color: cadetblue;
+}
+.p2{
+    height: 100%;
+    width: 70%;
+    background-color: cornflowerblue ;
+}
+h2{
+    padding-left: 30px;
+    margin-bottom: 30px;
+   
+    font-weight: 600;
+}
+h1{
+    padding-left: 80px;
+    font-weight: 900;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: brown;
+    text-decoration: underline;
+}
+button{
+    padding: 15px;
+    position: relative;
+    left: 90px;
+}
+button:hover{
+    background-color: goldenrod;
+    cursor: pointer;
+}
+h2:hover{
+    background-color: darkgray;
+    width: 80%;
+    
+}
+
