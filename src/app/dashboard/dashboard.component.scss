@@ -1,20 +1,26 @@
-.child{
+.parent{
     height: 100vh;
     width: 100vw;
-    background-color: bisque;
+}
+.child{
+    height: 100%;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 .p1{
-    height: 100%;
+    height:100%;
     width: 20%;
-    background-color: cadetblue;
+    border: 2px solid black;
+
+}
+hr{
+    border: 4px solid black;
 }
 .p2{
     height: 100%;
     width: 80%;
-    background-color: cornflowerblue ;
 }
 h1{
     padding-left: 50px;
@@ -26,7 +32,8 @@ h3{
     margin: 20px;
 }
 h3:hover{
-    background-color:whitesmoke;
+    background-color:black;
+    color: white;
     cursor: pointer;
 }
 button{
@@ -37,6 +44,7 @@ button{
     font-weight: 600;
 }
 button:hover{
-    background-color: white;
+    background-color:black;
     color: red;
+    
 }
