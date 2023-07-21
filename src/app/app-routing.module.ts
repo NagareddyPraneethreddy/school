@@ -9,7 +9,7 @@ import { CreateComponent } from './create/create.component';
 
 const routes: Routes = [
   {path:'login',component:LoginComponent},
-  {path:'dashbord',component:DashboardComponent,children:[
+  {path:'dashboard',component:DashboardComponent,children:[
     {path:'home',component:HomeComponent},
     {path:'student',component:StudentComponent},
     {path:'create',component:CreateComponent},
