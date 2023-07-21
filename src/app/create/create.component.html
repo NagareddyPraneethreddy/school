@@ -48,9 +48,9 @@
                 </div>
                 </div>
                 
-                <label>Day Schollar</label>
+                <label id="d">Day Schollar</label>
                 <input type="radio" formControlName="type" value="day" name="type">
-                <label>Residential</label>
+                <label id="r">Residential</label>
                 <input type="radio" formControlName="type" value="hstl" name="type"><br>
 
                 <div *ngIf="studentForm.get('type')?.value=='day'">
@@ -62,30 +62,29 @@
                     <label>Hostel Fee</label>
                     <input type="number" formControlName="hostel">
                 </div>
-                <div class="edge">
+                <div >
                 <div formArrayName="marks">
-                    <div *ngFor="let mark of marksFormArray.controls; let i=index">
+                    <div *ngFor="let mark of marksFormArray.controls; let i=index" class="edge">
                         <div formGroupName="{{i+1}}">
                             <label>Class</label>
                             <input type="text" formControlName="class"><br>
                             <label>Year</label>
                             <input type="number" formControlName="year"><br>
-                            <label>Peracentage</label>
+                            <label>Percentage</label>
                             <input type="text" formControlName="percentage">
                             <span *ngIf="marksFormArray.controls[i].get('percentage')?.invalid && marksFormArray.controls[i].get('percentage')?.touched">
                                 <p *ngIf="marksFormArray.controls[i].get('percentage')?.errors?.['min']">Percentage should be in between 0 to 100 </p>
                                 <p *ngIf="marksFormArray.controls[i].get('percentage')?.errors?.['max']">Percentage should be in between 0 to 100 </p>
                             </span>
                             <br>
-                            <button (click)="remove(i)">Remove</button>
+                            <button (click)="remove(i)" id="but3">-Remove</button>
                         </div>
                     </div>
                 </div>
-                <button (click)="add()">Previous Education</button>
-
-                <textarea name="" id="" cols="50" rows="4" formControlName="text">Detail of the student:-</textarea>
+                <textarea name="" id="" cols="50" rows="3" formControlName="text">Detail of the student:-</textarea><br>
                 <br>
-                <button (click)="submit()">Submit</button>
+                <button (click)="add()" id="but1">Previous Education</button><br>
+                <button (click)="submit()" id="but">Submit</button>
                 </div>
             </form>
         </div>
