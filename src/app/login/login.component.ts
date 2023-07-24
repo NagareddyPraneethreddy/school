@@ -9,25 +9,26 @@ import { Router } from '@angular/router';
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent {
-  // public loginForm: FormGroup = new FormGroup({
-  //   mail: new FormControl(),
-  //   password: new FormControl(),
+  public loginForm: FormGroup = new FormGroup({
+    email: new FormControl(),
+    password: new FormControl(),
 
-  // })
-  // constructor(private loginPage: LoginService,private router:Router) { }
+  })
+  constructor(private loginService:LoginService,private router:Router){}
 
-  // login() {
-  //   console.log(this.loginForm);
+   login(){
+    console.log(this.loginForm);
 
-  //   this.loginPage.submit(this.loginForm.value).subscribe(
-  //     (data: any) => {
-  //       alert("Login SucessFull");
-  //       this.router.navigateByUrl('/dashboard');
-  //     },
-  //     (err: any) => {
-  //       alert("Error in Login Credntials")
-  //     }
-  //   )
-
-  // }
+    this.loginService.createLogin(this.loginForm.value).subscribe(
+      (data:any)=>{
+        alert("Login Succssfully");
+        this.router.navigateByUrl("/dashboard");
+        localStorage.setItem('token',data.token);
+      },
+      (err:any)=>{
+        alert("login Failed")
+      }
+    )
+   }
+  
 }

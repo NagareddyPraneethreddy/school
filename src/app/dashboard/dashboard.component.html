@@ -6,7 +6,7 @@
         <h3 routerLink="home">Home</h3>
         <h3 routerLink="create">Create Students</h3>
         <h3 routerLink="student">All Students</h3><br>
-        <button routerLink="/login" class="btn btn-danger">Logout</button>
+        <button (click)="logout()" class="btn btn-danger">Logout</button>
     </div>
     <div class="p2">
         <router-outlet></router-outlet>

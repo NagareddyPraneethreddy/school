@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { FormArray, FormControl, FormGroup, Validators } from '@angular/forms';
 import { max } from 'rxjs';
+import { StudentService } from '../student.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-create',
@@ -42,8 +44,31 @@ export class CreateComponent {
       })
     )
   }
+  public id:any = "";
+  constructor(private studentservice:StudentService,private activatedRoute:ActivatedRoute){
+    activatedRoute.params.subscribe(
+      (data:any)=>{
+        this.id = data.id;
+
+        studentservice.getstudent(this.id).subscribe(
+          (data:any)=>{
+            this.studentForm.patchValue(data);
+          }
+        )
+      }
+      
+      )
+    
+  }
   submit(){
     console.log(this.studentForm);
+    this.studentservice.addstudents(this.studentForm.value).subscribe(
+      (data:any)=>
+      alert("added Successfully")
+    );
+    (err:any)=>{
+      alert("Student Not added")
+    }
   }
   remove(i:number){
     this.marksFormArray.removeAt(i)

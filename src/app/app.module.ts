@@ -11,6 +11,7 @@ import { HomeComponent } from './home/home.component';
 import { CreateComponent } from './create/create.component';
 import { StudentComponent } from './student/student.component';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { StudentDetailsComponent } from './student-details/student-details.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
     PagenotfoundComponent,
     HomeComponent,
     CreateComponent,
-    StudentComponent
+    StudentComponent,
+    StudentDetailsComponent
   ],
   imports: [
     BrowserModule,

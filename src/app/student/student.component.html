@@ -1,26 +1,61 @@
-<div class="p1">
-    <div class="c1">
-        <div class="t1"><h1>STUDENT DETAILS</h1></div>
-        <div class="t2">
-            <table>
+<div class="parent">
+    <div class="top"><h1><ins>STUDENTS DETAILS TABLE</ins></h1></div>
+    <div class="bot">
+        <div class="order">
+            <input type="text" [(ngModel)]="data" (keyup)="studentfilter()">
+            <label>Sorting</label>
+            <select [(ngModel)]="asc">
+                <option>class</option>
+                <option>name</option>
+            </select>
+            <label>Direction</label>
+            <select [(ngModel)]="dsc">
+            <option>asc</option>
+            <option>desc</option>
+            </select>
+            <button (click)="studentsort()">Sort</button>
+        </div>
+
+        <div>
+            <table class="table table-bordered">
                 <thead>
                     <tr>
                         <th>S.no</th>
                         <th>Name</th>
                         <th>Class</th>
                         <th>EMAIL</th>
+                        <th>DOB</th>
                         <th>Gender</th>
-                        <th>Marks</th>
+                        <th>Address</th>
+                        <th>DayScholar/resedential</th>
+                        <th>BusFee</th>
+                        <th>HostelFee</th>
+                        <th>percentage</th>
+                        <th>Action</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
+                    <tr *ngFor="let student of students let i=index">
+                        <td>{{i+1}}</td>
+                        <td>{{student.name}}</td>
+                        <td>{{student.class}}</td>
+                        <td>{{student.email}}</td>
+                        <td>{{student.today|date:'dd-mm-yyyy'}}</td>
+                        <td>{{student.gender}}</td>
+                        <td>{{student.address.line}}
+                            {{student.address.city}}
+                            {{student.address.state}}
+                            {{student.address.pin}}
+                        </td>
+                        <td>{{student.type}}</td>
+                        <td>{{student.bus}}</td>
+                        <td>{{student.hstl}}</td>
+                        <td [ngStyle]="{color:student.percentage>=55?'green':'red'}">{{student.percentage}}</td>
+                        <td>
+                            <button (click)="deletestudent(student.id)" class="btn btn-danger">Delete</button>
+                            <button class="btn btn-warning" (click)="edit()">Edit</button>
+                            <button class="btn btn-info" (click)="view(student.id)">View</button>
+                        </td>
                     </tr>
                 </tbody>
             </table>
