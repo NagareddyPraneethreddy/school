@@ -13,7 +13,60 @@ h1{
 .bot{
     height: 90%;
     width: 100%;
-    background-color: aquamarine;
     overflow: auto;
 }
+label{
+    padding-left: 50px;
+    font-size: large;
+    font-weight: 700;
+}
+input{
+    margin-left: 100px;
+    display: inline-block;
+}
+input:hover{
+    cursor: pointer;
+    
+    border: none;
+}
+table{
+    border: 1px solid black;
+    margin: 10px;
+}
+select:hover{
+    cursor: pointer;
+}
+select{
+    font-size: larger;
+}
+button{
+    background-color:blueviolet;
+    color: black;
+    margin-left: 10px;
+}
+button:hover{
+    background-color: chartreuse;
+}
+th{
+    background-color: cadetblue;
+    text-align: center;
+}
+#del{
+    background-color: red;
+    width: 70px;
+}
+#view{
+    background-color: yellow;
+    width: 70px;
+}
+#edit{
+    background-color: darkgreen;
+    width: 70px;
+}
+td{
+    border: 1px solid grey;
+    text-align: center;
+}
+
+
 

@@ -8,6 +8,7 @@ import { StudentComponent } from './student/student.component';
 import { CreateComponent } from './create/create.component';
 import { authenticationGuard } from './authentication.guard';
 import { StudentDetailsComponent } from './student-details/student-details.component';
+import { notifyGuard } from './notify.guard';
 
 const routes: Routes = [
   {path:'login',component:LoginComponent},
@@ -15,7 +16,8 @@ const routes: Routes = [
     {path:'home',component:HomeComponent},
     {path:'student',component:StudentComponent},
     {path:'student-details/:id',component:StudentDetailsComponent},
-    {path:'create',component:CreateComponent},
+    {path:'create',component:CreateComponent,canDeactivate:[notifyGuard]},
+    {path:'edit-student/:id',component:CreateComponent},
 
   ]},
   {path:'',component:LoginComponent},

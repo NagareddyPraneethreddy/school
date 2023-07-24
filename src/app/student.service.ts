@@ -30,5 +30,8 @@ export class StudentService {
   addstudents(data: any): Observable<any> {
     return this.httpClient.post("https://64b8a34b21b9aa6eb07a012b.mockapi.io/api/students-mini/students", data)
   }
+  updatestudent(id:any,data:any){
+    return this.httpClient.put("https://64b8a34b21b9aa6eb07a012b.mockapi.io/api/students-mini/students/"+id,data);
+  }
 
 }

@@ -10,7 +10,7 @@ import { StudentService } from '../student.service';
 export class StudentDetailsComponent {
 
   public id: any = "";
-  public student: any = "";
+  public student: any = {};
   constructor(private activateRoute: ActivatedRoute, private studentService: StudentService) {
 
     activateRoute.params.subscribe(

@@ -1,7 +1,16 @@
-<h5>id:-{{id}}<h5>
+<h5>id:-{{student.id}}<h5>
 <h5>Name:-{{student.name}}</h5>
 <h5>Class:-{{student.class}}</h5>
-<h5>DOb:-{{student.date}}</h5>
+<h5>DOb:-{{student.dob}}</h5>
 <h5>email:-{{student.email}}</h5>
-<h5>Gender:-{{student.gender}}</h5>        
-<h5>Address:-{{student.address.pin}}</h5>
+<h5>Gender:-
+    {{student.male}}
+    {{student.female}}
+</h5>        
+<h5>Address:-
+    {{student.address.pin}}
+    {{student.address.line}}
+    {{student.address.city}}
+    {{student.address.state}}
+
+</h5>

@@ -32,6 +32,6 @@ import { StudentDetailsComponent } from './student-details/student-details.compo
     HttpClientModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent] 
 })
 export class AppModule { }

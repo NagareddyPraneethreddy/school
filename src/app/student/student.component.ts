@@ -69,8 +69,8 @@ export class StudentComponent {
     )
 
   };
-  edit(){
-    
+  edit(id:number){
+    this.router.navigateByUrl("/dashboard/edit-student/"+id);
   }
   view(id:number){
        this.router.navigateByUrl("/dashboard/student-details/"+id);
